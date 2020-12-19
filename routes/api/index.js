@@ -39,11 +39,23 @@ router.get("/user_data", (req, res) => {
   const { password, ...user } = req.user;
   res.json(user);
 });
-
+// for all covid stats
 router.get("/covid_stats", async (req, res) => {
   const stats = await CovidService.getStats('USA');
 
   res.json(stats.data);
+});
+// just cases
+router.get("/covid_stats", async (req, res) => {
+  const stats = await CovidService.getCases('USA');
+
+  res.json(stats.data.response[0].cases);
+});
+// just deaths
+router.get("/covid_stats", async (req, res) => {
+  const stats = await CovidService.getDeaths('USA');
+
+  res.json(stats.data.response[0].deaths);
 });
 
 module.exports = router;
