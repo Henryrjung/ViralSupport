@@ -1,7 +1,6 @@
 {
   "name": "1-Passport-Example",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "npm run lint",
@@ -14,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.0",
     "bcryptjs": "2.4.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
@@ -30,5 +30,14 @@
     "prettier-semi-cli": "^1.0.0",
     "semistandard": "^16.0.0",
     "snazzy": "^9.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Henryrjung/ViralSupport.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Henryrjung/ViralSupport/issues"
+  },
+  "homepage": "https://github.com/Henryrjung/ViralSupport#readme",
+  "description": ""
 }
