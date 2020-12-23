@@ -46,16 +46,16 @@ router.get("/covid_stats", async (req, res) => {
   res.render("index", stats.data.response[0]);
 });
 // just cases
-router.get("/covid_stats", async (req, res) => {
-  const stats = await CovidService.getCases('USA');
+// router.get("/covid_stats", async (req, res) => {
+//   const stats = await CovidService.getCases('USA');
 
-  res.json(stats.data.response[0].cases);
-});
-// just deaths
-router.get("/covid_stats", async (req, res) => {
-  const stats = await CovidService.getDeaths('USA');
+//   res.json(stats.data.response[0].cases);
+// });
+// // just deaths
+// router.get("/covid_stats", async (req, res) => {
+//   const stats = await CovidService.getDeaths('USA');
 
-  res.json(stats.data.response[0].deaths);
-});
+//   res.json(stats.data.response[0].deaths);
+// });
 
 module.exports = router;
