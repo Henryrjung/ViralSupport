@@ -3,9 +3,10 @@ const path = require('path');
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require('../../config/middleware/isAuthenticated');
 const router = require('express').Router();
+const CovidService = require("../../services/covid.service");
 // gets handlebars homepage
 router.get("/", function(req, res) {
-  res.render("index");
+  res.render("index", CovidService);
 });
 
 router.get('/', (req, res) => {

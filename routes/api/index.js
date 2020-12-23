@@ -42,8 +42,8 @@ router.get("/user_data", (req, res) => {
 // for all covid stats
 router.get("/covid_stats", async (req, res) => {
   const stats = await CovidService.getStats('USA');
-
-  res.json(stats.data);
+  console.log(stats.data.response[0]);
+  res.render("index", stats.data.response[0]);
 });
 // just cases
 router.get("/covid_stats", async (req, res) => {
