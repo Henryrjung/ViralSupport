@@ -13,6 +13,30 @@
     <h4 class="slogan">Spread Support, Not Covid!</h4>
 </header>
 
+{{!-- {
+  continent: 'North-America',
+  country: 'USA',
+  population: 331928610,
+  cases: {
+    new: '+186312',
+    active: 7422200,
+    critical: 28111,
+    recovered: 10919097,
+    '1M_pop': '56253',
+    total: 18671860
+  },
+  deaths: { new: '+3115', '1M_pop': '996', total: 330563 },
+  tests: { '1M_pop': '717287', total: 238088208 },
+  day: '2020-12-23',
+  time: '2020-12-23T01:15:11+00:00'
+} --}}
+
+<ul>
+{{ this.continent }}
+{{ this.cases.new }}
+</ul>
+
+
 <div class="container"></div>
 <div class="row"></div>
 
