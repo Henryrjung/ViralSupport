@@ -9,19 +9,14 @@ router.get("/", function(req, res) {
   res.render("index", CovidService);
 });
 
-router.get('/', (req, res) => {
-  // If the user already has an account send them to the members page
-  if (req.user) {
-    res.redirect('/members');
-  }
-
-  res.sendFile(path.join(__dirname, '../../public/signup.html'));
+router.get('/news', (req, res) => {
+  res.render("news");
 });
 
 router.get('/login', (req, res) => {
   // If the user already has an account send them to the members page
   if (req.user) {
-    res.redirect('/members');
+    res.redirect('index');
   }
 
   res.sendFile(path.join(__dirname, '../../public/login.html'));
@@ -36,7 +31,8 @@ router.get('/logout', (req, res) => {
 // Here we've add our isAuthenticated middleware to this route.
 // If a user who is not logged in tries to access this route they will be redirected to the signup page
 router.get('/members', isAuthenticated, (_req, res) => {
-  res.sendFile(path.join(__dirname, '../../public/members.html'));
+  res.render("index");
+  // res.sendFile(path.join(__dirname, '../../public/members.html'));
 });
 
 module.exports = router;
