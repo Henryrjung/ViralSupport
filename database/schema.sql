@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS passport_demo;
-CREATE DATABASE passport_demo;
+DROP DATABASE IF EXISTS viral_support_db;
+CREATE DATABASE viral_support_db;
