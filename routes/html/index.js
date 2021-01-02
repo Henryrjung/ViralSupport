@@ -5,8 +5,10 @@ const isAuthenticated = require('../../config/middleware/isAuthenticated');
 const router = require('express').Router();
 const CovidService = require("../../services/covid.service");
 // gets handlebars homepage
-router.get("/", function(req, res) {
-  res.render("index", CovidService);
+router.get("/", async(req, res) => {
+  const stats = await CovidService.getStats('USA');
+  console.log(stats.data.response[0]);
+  res.render("index", stats.data.response[0]);
 });
 
 router.get('/news', (req, res) => {
@@ -19,7 +21,7 @@ router.get('/login', (req, res) => {
     res.redirect('index');
   }
 
-  res.sendFile(path.join(__dirname, '../../public/login.html'));
+  // res.sendFile(path.join(__dirname, '../../public/login.html'));
 });
 
 // Route for logging user out
