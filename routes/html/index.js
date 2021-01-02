@@ -11,17 +11,19 @@ router.get("/", async(req, res) => {
   res.render("index", stats.data.response[0]);
 });
 
-router.get('/news', (req, res) => {
-  res.render("news");
-});
-
 router.get('/login', (req, res) => {
-  // If the user already has an account send them to the members page
+  res.render("login");
   if (req.user) {
     res.redirect('index');
   }
+});
 
-  // res.sendFile(path.join(__dirname, '../../public/login.html'));
+router.get('/signup', (req, res) => {
+  res.render("signup");
+});
+
+router.get('/profile', (req, res) => {
+  res.render("profile");
 });
 
 // Route for logging user out
