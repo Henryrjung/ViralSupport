@@ -3,7 +3,6 @@ const router = require("express").Router();
 const db = require("../../models");
 const passport = require("../../config/passport");
 const CovidService = require("../../services/covid.service");
-const http = require("https");
 // Using the passport.authenticate middleware with our local strategy.
 // If the user has valid login credentials, send them to the members page.
 // Otherwise the user will be sent an error
@@ -47,44 +46,5 @@ router.get("/covid_stats", async (req, res) => {
   console.log(stats.data.response[0]);
   res.render("index", stats.data.response[0]);
 });
-// just cases
-// router.get("/covid_stats", async (req, res) => {
-//   const stats = await CovidService.getCases('USA');
-
-//   res.json(stats.data.response[0].cases);
-// });
-// // just deaths
-// router.get("/covid_stats", async (req, res) => {
-//   const stats = await CovidService.getDeaths('USA');
-
-//   res.json(stats.data.response[0].deaths);
-// });
-const options = {
-	"method": "GET",
-	"hostname": "coronavirus-smartable.p.rapidapi.com",
-	"port": null,
-	"path": "/news/v1/US/",
-	"headers": {
-		"x-rapidapi-key": "22539d0047mshaba23ae76c1a0c3p1d7388jsn5281cea1a33d",
-		"x-rapidapi-host": "coronavirus-smartable.p.rapidapi.com",
-		"useQueryString": true
-	}
-};
-
-const req = http.request(options, function (res) {
-	const chunks = [];
-
-	res.on("data", function (chunk) {
-		chunks.push(chunk);
-	});
-
-	res.on("end", function () {
-		const body = Buffer.concat(chunks);
-		console.log(body.toString());
-	});
-});
-
-req.end();
-
 
 module.exports = router;
