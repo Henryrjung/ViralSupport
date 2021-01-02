@@ -12,18 +12,24 @@ router.get("/", async(req, res) => {
 });
 
 router.get('/login', (req, res) => {
-  res.render("login");
   if (req.user) {
-    res.redirect('index');
+    return res.redirect('/');
   }
+  res.render("login");
 });
 
 router.get('/signup', (req, res) => {
   res.render("signup");
 });
 
-router.get('/profile', (req, res) => {
+router.get('/profile', isAuthenticated, (req, res) => {
   res.render("profile");
+  console.log(req.user)
+});
+
+router.get('/profile/:id', (req, res) => {
+  res.render("profile");
+  console.log(req.user)
 });
 
 // Route for logging user out
@@ -34,9 +40,10 @@ router.get('/logout', (req, res) => {
 
 // Here we've add our isAuthenticated middleware to this route.
 // If a user who is not logged in tries to access this route they will be redirected to the signup page
-router.get('/members', isAuthenticated, (_req, res) => {
-  res.render("index");
-  // res.sendFile(path.join(__dirname, '../../public/members.html'));
+router.get('/members', isAuthenticated, (req, res) => {
+  res.render("members");
+  console.log(req.user)
+  
 });
 
 module.exports = router;
