@@ -13,17 +13,17 @@
     <h4 class="slogan">Spread Support, Not Covid!</h4>
 </header>
 
-<div>
-  <h2>COVID-19 Statistics for {{this.continent}}</h2>
+<div id="mainStats">
+  <h2>COVID-19 Statistics for {{this.continent}}:</h2>
   <ul>
     <li>
-      <p>Cases: {{this.cases.total}}</p>
+      <p class="currentCases">Total Cases:<br> {{this.cases.total}}</p>
     </li>
     <li>
-      <p>Deaths: {{this.deaths.total}}</p>
+      <p class="currentDeaths">Deaths:<br>  {{this.deaths.total}}</p>
     </li>
     <li>
-      <p>Recovered: {{this.cases.recovered}}</p>
+      <p class="currentRecovered">Recovered:<br>  {{this.cases.recovered}}</p>
     </li>
   </ul>
 </div>
@@ -51,7 +51,7 @@
                     <li>Avoid large crowds</li>
                 </ul></p>
                 <h2>Get Connected</h2>
-                <p>Join our chat board and connect with others by signing up <a>here</a></p>
+                <p>Join our chat board and connect with others by signing up <a href="http://localhost:8080/signup.html">here</a></p>
                 
             </div>
           </section>
