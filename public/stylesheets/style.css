@@ -102,6 +102,7 @@ header {
 
 }
 
+/*div containing current stats*/
 #mainStats {
  background-color: lightgray;
  width: 50%;
