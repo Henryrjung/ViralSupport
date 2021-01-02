@@ -101,3 +101,49 @@ header {
   text-align: center;
 
 }
+
+/*div containing current stats*/
+#mainStats {
+ background-color: lightgray;
+ width: 50%;
+ margin: auto;
+ 
+}
+
+/* statistics heading */
+h2 {
+  font-size: 45px;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}
+
+/* headings for current stats */
+.currentCases {
+  color:  #1a2157;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.currentDeaths {
+  color: #b11b6b;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.currentRecovered {
+  color: #962cc4;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
