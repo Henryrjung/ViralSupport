@@ -109,12 +109,14 @@ header {
  
 }
 
+/* statistics heading */
 h2 {
   font-size: 45px;
   text-align: center;
   font-family: 'Oswald', sans-serif;
 }
 
+/* headings for current stats */
 .currentCases {
   color:  #1a2157;
   font-size: 30px;
