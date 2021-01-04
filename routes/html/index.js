@@ -4,6 +4,8 @@ const path = require('path');
 const isAuthenticated = require('../../config/middleware/isAuthenticated');
 const router = require('express').Router();
 const CovidService = require("../../services/covid.service");
+
+
 // gets handlebars homepage
 router.get("/", async(req, res) => {
   const stats = await CovidService.getStats('USA');

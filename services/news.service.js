@@ -1,4 +1,6 @@
 const http = require("https");
+const Parser = require ("rss-parser")
+const parser = new Parser()
 
 const options = {
 	"method": "GET",
@@ -21,7 +23,7 @@ const req = http.request(options, function (res) {
 
 	res.on("end", function () {
 		const body = Buffer.concat(chunks);
-		// console.log(body.toString());
+		console.log(body.toString());
 	});
 });
 
