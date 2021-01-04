@@ -3,16 +3,17 @@ const router = require("express").Router();
 const db = require("../../models");
 const passport = require("../../config/passport");
 const CovidService = require("../../services/covid.service");
-
 // Using the passport.authenticate middleware with our local strategy.
 // If the user has valid login credentials, send them to the members page.
 // Otherwise the user will be sent an error
 router.post("/login", passport.authenticate("local"), (req, res) => {
   // Sending back a password, even a hashed password, isn't a good idea
   res.json({
+    username: req.user.username,
     email: req.user.email,
     id: req.user.id,
   });
+  console.log(this)
 });
 
 // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
@@ -45,17 +46,5 @@ router.get("/covid_stats", async (req, res) => {
   console.log(stats.data.response[0]);
   res.render("index", stats.data.response[0]);
 });
-// just cases
-// router.get("/covid_stats", async (req, res) => {
-//   const stats = await CovidService.getCases('USA');
-
-//   res.json(stats.data.response[0].cases);
-// });
-// // just deaths
-// router.get("/covid_stats", async (req, res) => {
-//   const stats = await CovidService.getDeaths('USA');
-
-//   res.json(stats.data.response[0].deaths);
-// });
 
 module.exports = router;

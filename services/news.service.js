@@ -1,4 +1,6 @@
 const http = require("https");
+const Parser = require ("rss-parser")
+const parser = new Parser()
 
 const options = {
 	"method": "GET",
