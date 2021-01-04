@@ -4,13 +4,28 @@ const path = require('path');
 const isAuthenticated = require('../../config/middleware/isAuthenticated');
 const router = require('express').Router();
 const CovidService = require("../../services/covid.service");
+const NewsService = require("../../services/news.service");
 
+// router.get("/", async(req, res) => {
+//   const stats = await NewsService.getNews();
+//   console.log(stats);
+//   res.render("index", stats);
+// });
 
-// gets handlebars homepage
+// route to get covid stats api data
 router.get("/", async(req, res) => {
   const stats = await CovidService.getStats('USA');
-  console.log(stats.data.response[0]);
+  // const newsStats = await NewsService.getNews();
+  // console.log(stats.data.response[0]);
+  // console.log(newsStats.data.news);
   res.render("index", stats.data.response[0]);
+  // res.render("index", newsStats.data.news[0]);
+});
+
+router.get("/news", async(req, res) => {
+  const newsStats = await NewsService.getNews();
+  console.log(newsStats.data.news);
+  res.render("news", newsStats.data.news);
 });
 
 router.get('/login', (req, res) => {
@@ -46,6 +61,14 @@ router.get('/members', isAuthenticated, (req, res) => {
   res.render("members");
   console.log(req.user)
   
+});
+
+router.get('/contact', (req, res) => {
+  res.render("contact");
+});
+
+router.get('/about', (req, res) => {
+  res.render("about");
 });
 
 
