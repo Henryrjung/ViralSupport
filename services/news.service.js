@@ -1,51 +1,50 @@
 const axios = require("axios").default;
-const Parser = require ("rss-parser")
-const parser = new Parser()
+// const Parser = require ("rss-parser")
+// const parser = new Parser()
 
 const NewsService = {
 	getNews: () => {
 		const options = {
 			method: 'GET',
 			url: 'https://coronavirus-smartable.p.rapidapi.com/news/v1/US/',
-			// params: {country: country },
 			headers: {
-			  'x-rapidapi-key': '22539d0047mshaba23ae76c1a0c3p1d7388jsn5281cea1a33d',
-			  'x-rapidapi-host': 'coronavirus-smartable.p.rapidapi.com',
-			},
+			  'x-rapidapi-key': 'ba8be4669fmshee0e414c4ce2a90p1a3daajsn012f6ec8285e',
+			  'x-rapidapi-host': 'coronavirus-smartable.p.rapidapi.com'
+			}
 		};
 
 		return axios.request(options);
 	},
 
-	getLocalNews: (country) => {
-		const options = {
-			method: 'GET',
-			url: 'https://coronavirus-smartable.p.rapidapi.com/news/v1/US/',
-			params: {country: country },
-			headers: {
-			  'x-rapidapi-key': '22539d0047mshaba23ae76c1a0c3p1d7388jsn5281cea1a33d',
-			  'x-rapidapi-host': 'coronavirus-smartable.p.rapidapi.com',
-			},
-		  };
+	// getLocalNews: (country) => {
+	// 	const options = {
+	// 		method: 'GET',
+	// 		url: 'https://coronavirus-smartable.p.rapidapi.com/news/v1/US/',
+	// 		params: {country: country },
+	// 		headers: {
+	// 		  'x-rapidapi-key': '22539d0047mshaba23ae76c1a0c3p1d7388jsn5281cea1a33d',
+	// 		  'x-rapidapi-host': 'coronavirus-smartable.p.rapidapi.com',
+	// 		},
+	// 	  };
 
 
-		return axios.request(options);
-	},
+	// 	return axios.request(options);
+	// },
 
-	getNationalNews: (country) => {
-		const options = {
-			method: 'GET',
-			url: 'https://coronavirus-smartable.p.rapidapi.com/news/v1/US/',
-			params: {country: country },
-			headers: {
-			  'x-rapidapi-key': '22539d0047mshaba23ae76c1a0c3p1d7388jsn5281cea1a33d',
-			  'x-rapidapi-host': 'coronavirus-smartable.p.rapidapi.com',
-			},
-		  };
+	// getNationalNews: (country) => {
+	// 	const options = {
+	// 		method: 'GET',
+	// 		url: 'https://coronavirus-smartable.p.rapidapi.com/news/v1/US/',
+	// 		params: {country: country },
+	// 		headers: {
+	// 		  'x-rapidapi-key': '22539d0047mshaba23ae76c1a0c3p1d7388jsn5281cea1a33d',
+	// 		  'x-rapidapi-host': 'coronavirus-smartable.p.rapidapi.com',
+	// 		},
+	// 	  };
 
 
-		return axios.request(options);
-	},
+	// 	return axios.request(options);
+	// },
 };
 
 
