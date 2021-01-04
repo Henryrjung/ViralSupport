@@ -16,6 +16,7 @@
     "axios": "^0.21.0",
     "bcryptjs": "2.4.3",
     "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "express-session": "^1.17.1",
@@ -25,8 +26,23 @@
     "mysql2": "^2.2.5",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
+<<<<<<< HEAD
     "sequelize": "^6.3.5",
     "session": "^0.1.0"
+=======
+    "rss-parser": "^3.10.0",
+    "sequelize": "^6.3.5",
+    "socket.io": "^3.0.4",
+    "strong-error-handler": "^4.0.0"
+  },
+  "final:after": {
+    "strong-error-handler": {
+      "params": {
+        "debug": false,
+        "log": true
+      }
+    }
+>>>>>>> d1e6e6b04e9504a2596e8f0293c14a722d27795f
   },
   "devDependencies": {
     "prettier-semi-cli": "^1.0.0",
