@@ -27,7 +27,16 @@
     "passport-local": "^1.0.0",
     "rss-parser": "^3.10.0",
     "sequelize": "^6.3.5",
-    "socket.io": "^3.0.4"
+    "socket.io": "^3.0.4",
+    "strong-error-handler": "^4.0.0"
+  },
+  "final:after": {
+    "strong-error-handler": {
+      "params": {
+        "debug": false,
+        "log": true
+      }
+    }
   },
   "devDependencies": {
     "prettier-semi-cli": "^1.0.0",

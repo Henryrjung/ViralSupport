@@ -22,3 +22,6 @@ CREATE TABLE news (
 
 SELECT * FROM stats;
 SELECT * FROM news;
+
+GET * FROM stats; https://covid-193.p.rapidapi.com/ 
+GET * FROM news; coronavirus-smartable.p.rapidapi.com
