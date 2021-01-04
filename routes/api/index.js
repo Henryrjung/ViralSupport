@@ -3,6 +3,7 @@ const router = require("express").Router();
 const db = require("../../models");
 const passport = require("../../config/passport");
 const CovidService = require("../../services/covid.service");
+const newsService = require("../../services/news.service");
 // Using the passport.authenticate middleware with our local strategy.
 // If the user has valid login credentials, send them to the members page.
 // Otherwise the user will be sent an error
@@ -45,6 +46,12 @@ router.get("/covid_stats", async (req, res) => {
   const stats = await CovidService.getStats('USA');
   console.log(stats.data.response[0]);
   res.render("index", stats.data.response[0]);
+});
+
+router.get("/covid_news", async (req, res) => {
+  const stats = await newsService.getNews();
+  console.log(stats);
+  res.render("index", stats);
 });
 
 module.exports = router;
