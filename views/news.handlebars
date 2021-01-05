@@ -7,12 +7,17 @@
     <a href="/login" style="float: right">Login</a>
     <a href="/signup" style="float: right">Sign Up</a>
 </nav>
-
-<div>
+<br>
+<h2 class="has-text-weight-bold">News</h2>
+<br>
+<div class="columns">
     <ul>
         {{#each this}}
-            <li>
-                <h1>{{title}}</h1>
+            <li class="column is-full">
+                <h1 class="has-text-weight-bold">{{title}}</h1>
+                <p class="has-text-weight-semibold">Published By: {{provider.name}}</p>
+                <p>{{excerpt}}</p>
+                <a href="{{ampWebUrl}}">Read the full article here</a>
             </li>
         {{/each}}
     </ul>
