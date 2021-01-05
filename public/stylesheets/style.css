@@ -118,13 +118,28 @@ header {
  
 }
 
-/* statistics heading */
-h2 {
+h1 {
   font-size: 45px;
   text-align: center;
   font-family: 'Oswald', sans-serif;
 }
 
+/* statistics heading */
+h2 {
+  font-size: 45px;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  padding-top: 10%;
+}
+
+p {
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 2%;
+}
 /* headings for current stats */
 .currentCases {
   color:  #1a2157;
