@@ -35,7 +35,7 @@ app.use(express.static('public'));
 // We need to use sessions to keep track of our user's login status
 app.use(
   session({
-    secret: "process.env.SESSION_SECRET",
+    secret: 'process.env.SESSION_SECRET',
     resave: true,
     saveUninitialized: true
   })

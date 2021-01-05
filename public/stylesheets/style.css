@@ -86,6 +86,7 @@ form.login {
 header {
   height: 150px;
   background: url("../stylesheets/background.jpg") no-repeat;
+  
 }
 
 .title {
@@ -100,6 +101,13 @@ header {
   font-family: 'Cinzel Decorative', cursive;
   text-align: center;
 
+}
+
+.modal-card-title{
+  color: red;
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Cinzel Decorative', cursive;
 }
 
 /*div containing current stats*/
