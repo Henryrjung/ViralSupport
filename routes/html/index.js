@@ -7,11 +7,11 @@ const CovidService = require("../../services/covid.service");
 const NewsService = require("../../services/news.service");
 
 
-router.get("/", async(req, res) => {
-  const stats = await NewsService.getNews();
-  console.log(stats.data.news[0]);
-  res.render("index", stats.data.news[0]);
-});
+// router.get("/", async(req, res) => {
+//   const stats = await NewsService.getNews();
+//   console.log(stats.data.news[0]);
+//   res.render("index", stats.data.news[0]);
+// });
 
 
 // route to get covid stats api data
