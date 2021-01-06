@@ -86,7 +86,7 @@ form.login {
 header {
   height: 150px;
   background: url("../stylesheets/background.jpg") no-repeat;
-  
+  background-size: cover;
 }
 
 .title {
@@ -100,7 +100,6 @@ header {
   color: white;
   font-family: 'Cinzel Decorative', cursive;
   text-align: center;
-
 }
 
 .modal-card-title{
@@ -115,9 +114,52 @@ header {
  background-color: lightgray;
  width: 50%;
  margin: auto;
- 
 }
 
+/* Main page grid */
+.grid {
+  display: grid;
+  margin-block-start: 10px;
+  grid-template-columns: 250px auto 250px;
+  grid-template-rows: repeat(3, 250px);
+  grid-gap: 1em;
+}
+
+header,
+aside,
+article,
+footer {
+  padding: 1em;
+}
+
+header, footer {
+  grid-column: 1 / 4;
+}
+
+.grid > * {
+  display: flex;
+  align-items: auto;
+  justify-content: center;
+}
+
+/* #img1 {
+  width: 250px;
+  height: 250px;
+}
+
+.img-right {
+  float:right;
+  margin-left:20px;
+  vertical-align: right;
+}
+
+.img-left {
+  float:left;
+  margin-right:20px;
+  vertical-align: left;
+} */
+
+/* About page heading */
 h1 {
   font-size: 45px;
   text-align: center;
@@ -132,6 +174,7 @@ h2 {
   padding-top: 10%;
 }
 
+/* About page paragraph */
 p {
   font-size: 20px;
   text-align: center;
@@ -139,7 +182,9 @@ p {
   padding-left: 10%;
   padding-right: 10%;
   padding-top: 2%;
+  padding-bottom: 5%;
 }
+
 /* headings for current stats */
 .currentCases {
   color:  #1a2157;
