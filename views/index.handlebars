@@ -26,16 +26,16 @@
     </aside>
 
     <article id="mainStats">
-      <h2>COVID-19 Statistics for {{this.continent}}:</h2>
+      <h2>COVID-19 Statistics for {{this.stats.continent}}:</h2>
       <ul>
         <li>
-          <p class="currentCases">Total Cases:<br> {{this.cases.total}}</p>
+          <p class="currentCases">Total Cases:<br> {{this.stats.cases.total}}</p>
         </li>
         <li>
-          <p class="currentDeaths">Deaths:<br> {{this.deaths.total}}</p>
+          <p class="currentDeaths">Deaths:<br> {{this.stats.deaths.total}}</p>
         </li>
         <li>
-          <p class="currentRecovered">Recovered:<br> {{this.cases.recovered}}</p>
+          <p class="currentRecovered">Recovered:<br> {{this.stats.cases.recovered}}</p>
         </li>
       </ul>
     </article>
