@@ -1,8 +1,9 @@
-</div><nav class="topnav">
+<nav class="topnav">
   <a class="active" href="/">Home</a>
   <a href="/news">News</a>
   <a href="/contact">Contact</a>
   <a href="/about">About</a>
+  <a href="/chat">Chat</a>
   <a href="/profile" style="float: right">Profile</a>
   <a href="/login" style="float: right">Login</a>
   <a href="/signup" style="float: right">Sign Up</a>
@@ -49,13 +50,25 @@
     </aside>
 
 </div>
-
+<br>
 <div>
-  <h2>News</h2>
+<iframe class="centerVideo" width="854" height="480" src="https://www.youtube.com/embed/GG2ueLT6Z48" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<br>
+<h2 class="has-text-weight-bold">News</h2>
+<br>
+<div class="columns">
   <ul>
-    <li>
-      <h3>{{this.title}}</h3>
+    {{#each this.news}}
+    <li class="column is-full">
+      <hr>
+      <h1 class="has-text-weight-bold">{{title}}</h1>
+      <p class="has-text-weight-semibold">Published By: {{provider.name}}</p>
+      <p>{{excerpt}}</p>
+      <a href="{{ampWebUrl}}">Read the full article here</a>
+      <hr>
     </li>
+    {{/each}}
   </ul>
 </div>
 

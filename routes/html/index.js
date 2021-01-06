@@ -6,22 +6,15 @@ const router = require('express').Router();
 const CovidService = require("../../services/covid.service");
 const NewsService = require("../../services/news.service");
 
-
-// router.get("/", async(req, res) => {
-//   const stats = await NewsService.getNews();
-//   console.log(stats.data.news[0]);
-//   res.render("index", stats.data.news[0]);
-// });
-
-
 // route to get covid stats api data
 router.get("/", async(req, res) => {
   const stats = await CovidService.getStats('USA');
-  // const newsStats = await NewsService.getNews();
-  // console.log(stats.data.response[0]);
-  // console.log(newsStats.data.news);
-  res.render("index", stats.data.response[0]);
-  // res.render("index", newsStats.data.news[0]);
+  const newsStats = await NewsService.getNews();
+  const renderData = {
+    stats: stats.data.response[0],
+    news: newsStats.data.news,
+  }
+  res.render("index", renderData);
 });
 
 router.get("/news", async(req, res) => {
@@ -73,6 +66,8 @@ router.get('/about', (req, res) => {
   res.render("about");
 });
 
-
+router.get('/chat', (req, res) => {
+  res.render("chat");
+});
 
 module.exports = router;

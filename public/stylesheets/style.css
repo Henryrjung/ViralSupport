@@ -46,7 +46,6 @@ form.login {
     display: none;
 }
 
-
 .loginContainer {
   font-size: large;
   max-width: 25%;
@@ -214,4 +213,15 @@ p {
   padding-bottom: 15px;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
+}
+
+.centerVideo {
+  margin-left: auto;
+  margin-right: auto;
+  display: block
+}
+
+.signUpContainer{
+  margin: auto;
+  width: 50%;
 }
