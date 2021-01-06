@@ -161,3 +161,8 @@ h2 {
   margin-right: auto;
   display: block
 }
+
+.signUpContainer{
+  margin: auto;
+  width: 50%;
+}
