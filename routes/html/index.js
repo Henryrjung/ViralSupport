@@ -2,6 +2,7 @@
 const path = require('path');
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require('../../config/middleware/isAuthenticated');
+const db = require('../../models');
 const router = require('express').Router();
 const CovidService = require("../../services/covid.service");
 const NewsService = require("../../services/news.service");
@@ -67,7 +68,20 @@ router.get('/about', (req, res) => {
 });
 
 router.get('/chat', (req, res) => {
-  res.render("chat");
+  res.render("chat",);
 });
+
+  // index route loads view.html
+router.get("/", async(req, res) => {
+  const posts = await db.Post.findAll()
+  console.log(posts)
+  res.render("chat", {posts});
+});
+
+router.get("/post", function(req, res) {
+  res.render("post",);
+});
+
+
 
 module.exports = router;
