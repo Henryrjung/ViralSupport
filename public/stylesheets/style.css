@@ -224,4 +224,38 @@ p {
 .signUpContainer{
   margin: auto;
   width: 50%;
+
+}  
+
+
+.resourceTitle{
+  color: #962cc4;
+  font-size: 35px;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.subtitle {
+  color:  #1a2157;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.fa-check {
+  color:#32a852;
+}
+
+.fa-minus {
+  color: #a83a32;
+}
+
+.fa-circle {
+  color:#cdd15c;
 }
