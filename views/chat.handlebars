@@ -28,14 +28,18 @@
 <div>
     <ul>
         {{#each posts}}  
-        <li>
-            <h2>{{this.title}}</h2>
-            <p>{{this.body}}</p>
+        <li class="column is-full">
+            <hr>
+            <h3 class="has-text-weight-bold">{{this.dataValues.title}}</h3>
+            <p>{{this.dataValues.body}}</p>
+            <button class="edit button is-info">Edit</button>
+            <button class="delete button is-danger">X</button>
+            <hr>
         </li>
         {{/each}}
     </ul>
-    
-
 </div>
+{{!-- <ul class="blog-container"> --}}
+</ul>
 <!-- Custom Script -->
 <script src="js/blog.js" type="text/javascript"></script>
