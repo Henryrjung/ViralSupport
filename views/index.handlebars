@@ -1,7 +1,7 @@
 <nav class="topnav">
   <a class="active" href="/">Home</a>
   <a href="/news">News</a>
-  <a href="/contact">Contact</a>
+  <a href="/contact">Resources</a>
   <a href="/about">About</a>
   <a href="/chat">Chat</a>
   <a href="/profile" style="float: right">Profile</a>
@@ -14,19 +14,41 @@
   <h4 class="slogan">Spread Support, Not Covid!</h4>
 </header>
 
-<div id="mainStats">
-  <h2>COVID-19 Statistics for {{this.stats.continent}}:</h2>
-  <ul>
-    <li>
-      <p class="currentCases">Total Cases:<br> {{this.stats.cases.total}}</p>
-    </li>
-    <li>
-      <p class="currentDeaths">Deaths:<br> {{this.stats.deaths.total}}</p>
-    </li>
-    <li>
-      <p class="currentRecovered">Recovered:<br> {{this.stats.cases.recovered}}</p>
-    </li>
-  </ul>
+<div class="grid">
+  <body>
+    <aside>
+      <div>
+        <img src='./graphics/img5.png' id='img1' class="img-left" />
+        <img src='./graphics/img6.png' id='img1' class="img-left" />
+        <img src='./graphics/img7.png' id='img1' class="img-left" />
+        <img src='./graphics/img8.png' id='img1' class="img-left" />
+      </div>
+    </aside>
+
+    <article id="mainStats">
+      <h2>COVID-19 Statistics for {{this.continent}}:</h2>
+      <ul>
+        <li>
+          <p class="currentCases">Total Cases:<br> {{this.cases.total}}</p>
+        </li>
+        <li>
+          <p class="currentDeaths">Deaths:<br> {{this.deaths.total}}</p>
+        </li>
+        <li>
+          <p class="currentRecovered">Recovered:<br> {{this.cases.recovered}}</p>
+        </li>
+      </ul>
+    </article>
+
+    <aside>
+      <div>
+        <img src='./graphics/img1.jpg' id='img1' class="img-right" />
+        <img src='./graphics/img2.jpg' id='img1' class="img-right" />
+        <img src='./graphics/img3.png' id='img1' class="img-right" />
+        <img src='./graphics/img4.png' id='img1' class="img-right" />
+      </div>
+    </aside>
+
 </div>
 <br>
 <div>
@@ -49,6 +71,12 @@
     {{/each}}
   </ul>
 </div>
+
+<footer class="footer">&copy; Copyright 2020</footer>
+</body>
+</div>
+
+
 
 <button id="myBtn">Open Modal</button>
 <div id="myModal" class="modal">
@@ -81,11 +109,10 @@
       </div>
     </section>
     <footer class="modal-card-foot">
-
-
     </footer>
   </div>
 </div>
+
 
 
 <div class="container"></div>
@@ -94,3 +121,4 @@
 <footer class="footer">&copy; Copyright 2020</footer>
 
 <script type="text/javascript" src="./js/modal.js"></script>
+
