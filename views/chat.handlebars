@@ -8,3 +8,34 @@
     <a href="/login" style="float: right">Login</a>
     <a href="/signup" style="float: right">Sign Up</a>
 </nav>
+
+<h2 class="has-text-weight-bold">Posts</h2>
+
+<div class="">
+    <div class="">
+        <div class="">
+        </div>
+        <div class="">
+            <a class="button is-primary" href="/post">New Post</a>
+        </div>
+    </div>
+    <div class="">
+        <div class="">
+        </div>
+    </div>
+</div>
+
+<div>
+    <ul>
+        {{#each posts}}  
+        <li>
+            <h2>{{this.title}}</h2>
+            <p>{{this.body}}</p>
+        </li>
+        {{/each}}
+    </ul>
+    
+
+</div>
+<!-- Custom Script -->
+<script src="js/blog.js" type="text/javascript"></script>
