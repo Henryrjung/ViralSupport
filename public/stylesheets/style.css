@@ -156,7 +156,13 @@ h2 {
   font-weight: bold;
 }
 
+.centerVideo {
+  margin-left: auto;
+  margin-right: auto;
+  display: block
+}
+
 .signUpContainer{
   margin: auto;
   width: 50%;
-  
+}

@@ -1,93 +1,93 @@
 <nav class="topnav">
-    <a class="active" href="/">Home</a>
-    <a href="/news">News</a>
-    <a href="/contact">Contact</a>
-    <a href="/about">About</a>
-    <a href="/profile" style="float: right">Profile</a>
-    <a href="/login" style="float: right">Login</a>
-    <a href="/signup" style="float: right">Sign Up</a>
+  <a class="active" href="/">Home</a>
+  <a href="/news">News</a>
+  <a href="/contact">Contact</a>
+  <a href="/about">About</a>
+  <a href="/chat">Chat</a>
+  <a href="/profile" style="float: right">Profile</a>
+  <a href="/login" style="float: right">Login</a>
+  <a href="/signup" style="float: right">Sign Up</a>
 </nav>
 
 <header>
-    <h1 class="title"><i class="fas fa-heartbeat"></i><span style="color:red;font-size:35px"> Viral</span> Support</h1>
-    <h4 class="slogan">Spread Support, Not Covid!</h4>
+  <h1 class="title"><i class="fas fa-heartbeat"></i><span style="color:red;font-size:35px"> Viral</span> Support</h1>
+  <h4 class="slogan">Spread Support, Not Covid!</h4>
 </header>
 
 <div id="mainStats">
-  <h2>COVID-19 Statistics for {{this.continent}}:</h2>
+  <h2>COVID-19 Statistics for {{this.stats.continent}}:</h2>
   <ul>
     <li>
-      <p class="currentCases">Total Cases:<br> {{this.cases.total}}</p>
+      <p class="currentCases">Total Cases:<br> {{this.stats.cases.total}}</p>
     </li>
     <li>
-      <p class="currentDeaths">Deaths:<br>  {{this.deaths.total}}</p>
+      <p class="currentDeaths">Deaths:<br> {{this.stats.deaths.total}}</p>
     </li>
     <li>
-      <p class="currentRecovered">Recovered:<br>  {{this.cases.recovered}}</p>
+      <p class="currentRecovered">Recovered:<br> {{this.stats.cases.recovered}}</p>
     </li>
   </ul>
 </div>
-
+<br>
 <div>
-  <h2>News</h2>
+<iframe class="centerVideo" width="854" height="480" src="https://www.youtube.com/embed/GG2ueLT6Z48" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<br>
+<h2 class="has-text-weight-bold">News</h2>
+<br>
+<div class="columns">
   <ul>
-    <li>
-      <h3>{{this.title}}</h3>
+    {{#each this.news}}
+    <li class="column is-full">
+      <hr>
+      <h1 class="has-text-weight-bold">{{title}}</h1>
+      <p class="has-text-weight-semibold">Published By: {{provider.name}}</p>
+      <p>{{excerpt}}</p>
+      <a href="{{ampWebUrl}}">Read the full article here</a>
+      <hr>
     </li>
+    {{/each}}
   </ul>
 </div>
 
 <button id="myBtn">Open Modal</button>
-    <div id="myModal"  class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-          <header class="modal-card-head">
-            <p class="modal-card-title">Welcome to<br> <i class="fas fa-heartbeat"></i> Viral Support! </p>
-            <span class="close">&times;</span>
-          </header>
-          <section class="modal-card-body">
+<div id="myModal" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Welcome to<br> <i class="fas fa-heartbeat"></i> Viral Support! </p>
+      <span class="close">&times;</span>
+    </header>
+    <section class="modal-card-body">
 
-            <div class="content">
-                <h2>Our Goal</h2>
-                <p>It's easy to get lost in the overwhelming amount of misinformation regarding COVID-19. Viral Support offers references to real-time, fact-checked information to help keep you safe.</p>
-                <h2>Get Informed</h2>
-                <p>Stay up to date on the latest statistics and recommendations by following the links available on our site.
-                 <h6> What you can do:</h6>
-                    <ul>
-                    <li></i> Wear a mask</li>
-                    <li>Social distance whenever possible</li>
-                    <li>Wash your hands frequently</li>
-                    <li>Avoid large crowds</li>
-                </ul></p>
-                <h2>Get Connected</h2>
-                <p>Join our chat board and connect with others by signing up <a href="http://localhost:8080/signup">here</a>.</p>
-                
-            </div>
-          </section>
-          <footer class="modal-card-foot">
-            
+      <div class="content">
+        <h2>Our Goal</h2>
+        <p>It's easy to get lost in the overwhelming amount of misinformation regarding COVID-19. Viral Support offers
+          references to real-time, fact-checked information to help keep you safe.</p>
+        <h2>Get Informed</h2>
+        <p>Stay up to date on the latest statistics and recommendations by following the links available on our site.
+        <h6> What you can do:</h6>
+        <ul>
+          <li></i> Wear a mask</li>
+          <li>Social distance whenever possible</li>
+          <li>Wash your hands frequently</li>
+          <li>Avoid large crowds</li>
+        </ul>
+        </p>
+        <h2>Get Connected</h2>
+        <p>Join our chat board and connect with others by signing up <a href="http://localhost:8080/signup">here</a>.
+        </p>
 
-          </footer>
-        </div>
       </div>
+    </section>
+    <footer class="modal-card-foot">
 
-{{!-- {
-  continent: 'North-America',
-  country: 'USA',
-  population: 331928610,
-  cases: {
-    new: '+186312',
-    active: 7422200,
-    critical: 28111,
-    recovered: 10919097,
-    '1M_pop': '56253',
-    total: 18671860
-  },
-  deaths: { new: '+3115', '1M_pop': '996', total: 330563 },
-  tests: { '1M_pop': '717287', total: 238088208 },
-  day: '2020-12-23',
-  time: '2020-12-23T01:15:11+00:00'
-} --}}
+
+    </footer>
+  </div>
+</div>
+
+
 <div class="container"></div>
 <div class="row"></div>
 
