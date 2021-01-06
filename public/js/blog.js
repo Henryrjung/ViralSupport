@@ -52,16 +52,16 @@ $(document).ready(function() {
 
   // This function constructs a post's HTML
   function createNewRow(post) {
-    var newPostCard = $("<div>");
+    var newPostCard = $("<li>");
     newPostCard.addClass("card");
     var newPostCardHeading = $("<div>");
     newPostCardHeading.addClass("card-header");
     var deleteBtn = $("<button>");
     deleteBtn.text("x");
-    deleteBtn.addClass("delete btn btn-danger");
+    deleteBtn.addClass("button is-danger delete");
     var editBtn = $("<button>");
     editBtn.text("EDIT");
-    editBtn.addClass("edit btn btn-default");
+    editBtn.addClass("edit button is-info");
     var newPostTitle = $("<h2>");
     var newPostDate = $("<small>");
     var newPostCategory = $("<h5>");
@@ -108,7 +108,7 @@ $(document).ready(function() {
       .parent()
       .parent()
       .data("post");
-    window.location.href = "/cms?post_id=" + currentPost.id;
+    window.location.href = "/post?post_id=" + currentPost.id;
   }
 
   // This function displays a message when there are no posts
@@ -116,7 +116,7 @@ $(document).ready(function() {
     blogContainer.empty();
     var messageH2 = $("<h2>");
     messageH2.css({ "text-align": "center", "margin-top": "50px" });
-    messageH2.html("No posts yet for this category, navigate <a href='/cms'>here</a> in order to create a new post.");
+    messageH2.html("No posts yet for this category, navigate <a href='/post'>here</a> in order to create a new post.");
     blogContainer.append(messageH2);
   }
 

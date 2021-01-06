@@ -67,14 +67,14 @@ router.get('/about', (req, res) => {
   res.render("about");
 });
 
-router.get('/chat', (req, res) => {
-  res.render("chat",);
-});
+// router.get('/chat', (req, res) => {
+//   res.render("chat",);
+// });
 
   // index route loads view.html
-router.get("/", async(req, res) => {
-  const posts = await db.Post.findAll()
-  console.log(posts)
+router.get("/chat", async(req, res) => {
+  const posts = await db.Post.findAll({})
+  console.log({posts})
   res.render("chat", {posts});
 });
 
