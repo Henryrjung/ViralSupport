@@ -82,6 +82,4 @@ router.get("/post", function(req, res) {
   res.render("post",);
 });
 
-
-
 module.exports = router;
