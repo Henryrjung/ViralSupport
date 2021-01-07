@@ -92,6 +92,7 @@ router.get("/covid_stats", async (req, res) => {
     db.Post.create({
       title: req.body.title,
       body: req.body.body,
+      by: req.body.by,
       category: req.body.category
     })
       .then(function(dbPost) {

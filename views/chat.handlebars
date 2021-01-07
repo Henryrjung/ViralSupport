@@ -25,42 +25,28 @@
     </div>
 </div>
 
-<div>
+<div class="blog">
     <ul>
         {{#each posts}}  
+        <li class="column is-full">
+            <hr>
+            <h3 class="has-text-weight-bold">{{this.dataValues.title}}</h3>
+            <p>{{this.dataValues.body}}</p>
+            <button class="button is-info">Edit</button>
+            <button class="button is-danger">Delete</button>
+            <hr>
         <li>
             <h2>{{this.title}}</h2>
             <p>{{this.body}}</p>
         </li>
         {{/each}}
     </ul>
-    
+
 
 </div>
+{{!-- <ul class="blog-container"> --}}
+</ul>
 
 
 <!-- Custom Script -->
-<script src="js/blog.js" type="text/javascript"></
-
-<script>
- $('form').submit(function(userName){
-        if ($('#input-message').val() != '') {
-            // own send message handlebar render
-            var source = $('#handlebars-own-send-msg').html();
-            var template = Handlebars.compile(source);
-            var context = { 'text' : $('#input-message').val()};
-            var theCompiledHtml = template(context);
-            $('#messages').append($(theCompiledHtml).hide().fadeIn(1000));
-            scrollToBottom();
-            // broadcast to another user
-            socket.emit('chat message',{
-                    userinfo: userinfo,
-                    inputval: $('#input-message').val()
-            });
-            $('#input-message').val('');
-        }
-        return false;
-    });
- 
- <script src="../../socket.io/socket.io.js"></script>
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="js/blog.js" type="text/javascript"></script> 

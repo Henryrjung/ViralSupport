@@ -51,45 +51,45 @@ $(document).ready(function() {
   }
 
   // This function constructs a post's HTML
-  function createNewRow(post) {
-    var newPostCard = $("<li>");
-    newPostCard.addClass("card");
-    var newPostCardHeading = $("<div>");
-    newPostCardHeading.addClass("card-header");
-    var deleteBtn = $("<button>");
-    deleteBtn.text("x");
-    deleteBtn.addClass("button is-danger delete");
-    var editBtn = $("<button>");
-    editBtn.text("EDIT");
-    editBtn.addClass("edit button is-info");
-    var newPostTitle = $("<h2>");
-    var newPostDate = $("<small>");
-    var newPostCategory = $("<h5>");
-    newPostCategory.text(post.category);
-    newPostCategory.css({
-      float: "right",
-      "font-weight": "700",
-      "margin-top":
-      "-15px"
-    });
-    var newPostCardBody = $("<div>");
-    newPostCardBody.addClass("card-body");
-    var newPostBody = $("<p>");
-    newPostTitle.text(post.title + " ");
-    newPostBody.text(post.body);
-    var formattedDate = new Date(post.createdAt).toLocaleDateString();
-    newPostDate.text(formattedDate);
-    newPostTitle.append(newPostDate);
-    newPostCardHeading.append(deleteBtn);
-    newPostCardHeading.append(editBtn);
-    newPostCardHeading.append(newPostTitle);
-    newPostCardHeading.append(newPostCategory);
-    newPostCardBody.append(newPostBody);
-    newPostCard.append(newPostCardHeading);
-    newPostCard.append(newPostCardBody);
-    newPostCard.data("post", post);
-    return newPostCard;
-  }
+  // function createNewRow(post) {
+  //   var newPostCard = $("<li>");
+  //   newPostCard.addClass("card");
+  //   var newPostCardHeading = $("<div>");
+  //   newPostCardHeading.addClass("card-header");
+  //   var deleteBtn = $("<button>");
+  //   deleteBtn.text("x");
+  //   deleteBtn.addClass("button is-danger delete");
+  //   var editBtn = $("<button>");
+  //   editBtn.text("EDIT");
+  //   editBtn.addClass("edit button is-info");
+  //   var newPostTitle = $("<h2>");
+  //   var newPostDate = $("<small>");
+  //   var newPostCategory = $("<h5>");
+  //   newPostCategory.text(post.category);
+  //   newPostCategory.css({
+  //     float: "right",
+  //     "font-weight": "700",
+  //     "margin-top":
+  //     "-15px"
+  //   });
+  //   var newPostCardBody = $("<div>");
+  //   newPostCardBody.addClass("card-body");
+  //   var newPostBody = $("<p>");
+  //   newPostTitle.text(post.title + " ");
+  //   newPostBody.text(post.body);
+  //   var formattedDate = new Date(post.createdAt).toLocaleDateString();
+  //   newPostDate.text(formattedDate);
+  //   newPostTitle.append(newPostDate);
+  //   newPostCardHeading.append(deleteBtn);
+  //   newPostCardHeading.append(editBtn);
+  //   newPostCardHeading.append(newPostTitle);
+  //   newPostCardHeading.append(newPostCategory);
+  //   newPostCardBody.append(newPostBody);
+  //   newPostCard.append(newPostCardHeading);
+  //   newPostCard.append(newPostCardBody);
+  //   newPostCard.data("post", post);
+  //   return newPostCard;
+  // }
 
   // This function figures out which post we want to delete and then calls
   // deletePost
