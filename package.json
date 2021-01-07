@@ -1,0 +1,56 @@
+{
+  "name": "1-passport-example",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm run lint",
+    "start": "node server.js",
+    "lint": "semistandard --verbose | snazzy",
+    "format": "prettier-semi --write '**/*.js'",
+    "watch": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "bcryptjs": "2.4.3",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "express-session": "^1.17.1",
+    "handlebars": "^4.7.6",
+    "helmet": "^4.3.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.2.5",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "rss-parser": "^3.10.0",
+    "sequelize": "^6.3.5",
+    "socket.io": "^3.0.4",
+    "strong-error-handler": "^4.0.0"
+  },
+  "final:after": {
+    "strong-error-handler": {
+      "params": {
+        "debug": false,
+        "log": true
+      }
+    }
+  },
+  "devDependencies": {
+    "prettier-semi-cli": "^1.0.0",
+    "semistandard": "^16.0.0",
+    "snazzy": "^9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Henryrjung/ViralSupport.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Henryrjung/ViralSupport/issues"
+  },
+  "homepage": "https://github.com/Henryrjung/ViralSupport#readme",
+  "description": ""
+}

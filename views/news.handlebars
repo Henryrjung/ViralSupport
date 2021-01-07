@@ -1,0 +1,25 @@
+<nav class="topnav">
+    <a class="active" href="/">Home</a>
+    <a href="/news">News</a>
+    <a href="/contact">Resources</a>
+    <a href="/about">About</a>
+    <a href="/chat">Blog</a>
+    <a href="/profile" style="float: right">Profile</a>
+    <a href="/login" style="float: right">Login</a>
+    <a href="/signup" style="float: right">Sign Up</a>
+</nav>
+<br>
+<h2 class="has-text-weight-bold">News</h2>
+<br>
+<div class="columns">
+    <ul>
+        {{#each this}}
+            <li class="column is-full">
+                <h1 class="has-text-weight-bold">{{title}}</h1>
+                <p class="has-text-weight-semibold">Published By: {{provider.name}}</p>
+                <p>{{excerpt}}</p>
+                <a href="{{webUrl}}">Read the full article here</a>
+            </li>
+        {{/each}}
+    </ul>
+</div>
