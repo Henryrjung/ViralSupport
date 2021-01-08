@@ -4,6 +4,7 @@
   <a href="/contact">Resources</a>
   <a href="/about">About</a>
   <a href="/chat">Blog</a>
+  <a href="/members">Welcome <span class="member-name"></span></a>
   <a href="/profile" style="float: right">Profile</a>
   <a href="/login" style="float: right">Login</a>
   <a href="/signup" style="float: right">Sign Up</a>
@@ -28,6 +29,7 @@
     <article id="mainStats">
       
       <ul><h2>COVID-19 Statistics for {{this.stats.continent}}:</h2>
+
         <li>
           <p class="currentCases">Total Cases:<br> {{this.stats.cases.total}}</p>
         </li>
@@ -88,10 +90,12 @@
     </header>
     <section class="modal-card-body">
 
-      <div class="content">
+      <div class="modalContent">
         <h2>Our Goal</h2>
         <p>It's easy to get lost in the overwhelming amount of misinformation regarding COVID-19. Viral Support offers
+
           references to real-time, fact-checked information to help keep you safe.</p>
+
         <h2>Get Connected</h2>
         <p>Join our chat board and connect with others by signing up <a href="http://localhost:8080/signup">here</a>.
         </p>
@@ -111,4 +115,5 @@
 <footer class="footer">&copy; Copyright 2020</footer>
 
 <script type="text/javascript" src="./js/modal.js"></script>
+<script type="text/javascript" src="js/members.js"></script>
 

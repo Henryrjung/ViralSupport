@@ -20,10 +20,14 @@ User Story: As someone has been affected by the corona virus, I want a site that
 
 ## Links
 
-* Github: 
+* Github: https://github.com/Henryrjung/ViralSupport
 * Heroku: 
 
 ## Screenshots
+### Homepage
+![Homepage](./public/screenshots/viralsupporthomepage.PNG)
+### Resources
+![Resources](./public/screenshots/viralsupportresources.PNG)
   
 ## Installation
 
